@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(card, cardTemplate, ownerId, popupImage, api) {
     this._card = card;
     this._cardTemplate = cardTemplate;
