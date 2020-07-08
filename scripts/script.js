@@ -1,3 +1,13 @@
+import '../pages/index.css';
+
+import {Api} from './Api';
+import {Card} from './Card';
+import {CardList} from './CardList';
+import {FormValidator} from './FormValidator';
+import {PopupForm} from './PopupForm';
+import {PopupImage} from './PopupImage';
+import {UserInfo} from './UserInfo';
+
 //DOM-элементы
 const addPlaceButton = document.querySelector('.user-info__button_add');
 const cardTemplate = document.querySelector('#place-card').content;
