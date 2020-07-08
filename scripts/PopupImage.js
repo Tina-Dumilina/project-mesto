@@ -1,5 +1,4 @@
-import { Popup } from './Popup';
-export class PopupImage extends Popup {
+class PopupImage extends Popup {
   /**
    * Можно лучше:
    * Удалить конструктор, тогда будет автоматически вызываться конструктор родительского класса.
