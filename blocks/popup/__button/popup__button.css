@@ -1,0 +1,14 @@
+.popup__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 33px;
+  font-size: 36px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.popup__button:disabled {
+  color: rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: transparent;
+}

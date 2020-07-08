@@ -1,0 +1,12 @@
+.user-info__button_edit {
+  width: 38px;
+  height: 18px;
+  font-size: 12px;
+  border-radius: 0;
+}
+
+@media (max-width: 980px) {
+  .user-info__button_edit {
+    margin: 0 auto;
+  }
+}
