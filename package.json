@@ -4,9 +4,9 @@
   "description": "Сервис \"Mesto\" создан для публикации и обмена фотографиями разных мест мира. Это учебный проект в Яндекс.Практикуме.",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production rimraf dist && webpack --mode production",
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",

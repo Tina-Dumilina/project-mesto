@@ -23,12 +23,14 @@ const userAvatarElem = document.querySelector('.user-info__photo');
 const usernameInput = formEditProfile.elements.userName; 
 const userJobInput = formEditProfile.elements.userJob;
 
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
+
 //Функции-хэлперы
 const createCard = (...arg) => new Card(...arg).create();
 
 //Инстансы
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort11',
+  baseUrl: `${serverUrl}/cohort11`,
   headers: {
     authorization: 'e16df6eb-48db-4658-b78e-44a0f91e14de',
     'Content-Type': 'application/json'

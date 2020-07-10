@@ -15,6 +15,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
   },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, 'images')
+    }
+  },
   module: {
     rules: [
       { 
@@ -34,9 +39,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [{
-          loader: 'file-loader',
-        }, ],
+        use: [
+          {
+            loader: 'file-loader',
+          }, 
+        ],
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
@@ -44,7 +51,6 @@ module.exports = {
           'file-loader?name=images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
-            options: {}
           },
         ]
       },
