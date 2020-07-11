@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    main: './scripts/script.js'
+    main: './src/scripts/script.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +17,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      images: path.resolve(__dirname, 'images')
+      images: path.resolve(__dirname, 'src/images')
     }
   },
   module: {
@@ -33,26 +33,26 @@ module.exports = {
         test: /\.css$/i,
         use: [
           (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-          'css-loader',
-          'postcss-loader'
-        ]
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
           {
-            loader: 'file-loader',
-          }, 
+            loader:'css-loader',
+            options: {
+                importLoaders: 2
+            } 
+          },
+          'postcss-loader'
         ],
       },
       {
-        test: /\.(png|jpg|gif|ico|svg)$/,
+        test: /\.(png|jpe?g|gif|ico|svg)$/i,
         use: [
-          'file-loader?name=images/[name].[ext]',
           {
-            loader: 'image-webpack-loader',
-          },
-        ]
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[ext]',
+              esModule: false
+            }
+          }, 
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
@@ -74,7 +74,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './index.html',
+      template: './src/index.html',
       filename: 'index.html'
     }),
     new WebpackMd5Hash(),
