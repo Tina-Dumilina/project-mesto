@@ -2,7 +2,7 @@
 
 Сервис "Mesto" создан для публикации и обмена фотографиями разных мест мира. Это учебный проект в Яндекс.Практикуме. 
 
-**Стек:**: JavaScript (ES6+), CSS3, HTML5, BEM.
+**Стек:**: JavaScript (ES6+), Webpack, CSS3, HTML5, BEM.
 
 ### Функционал:
 - Можно редактировать профиль.
@@ -14,10 +14,22 @@
 - Валидация форм с помощью HTML и JavaScript.
 - Все изменения отправляются на сервер (редактирование, добавление, удалением). Карточки сохраняются на сервере.
 
-### Планы по доработке проекта:
-- Разбить код на модули.
-- Собирать проект с помощью Webpack.
-- Добавить транспиляцию проекта при помощи Babel.
+### План по развертыванию проекта:
+```bash
+# Клонирование проекта
+$ git clone https://github.com/Tina-Dumilina/project-mesto.git
 
+# Установка зависимостей
+$ npm install
+
+# Запуск сборки в development режиме
+$ npm run dev
+
+# Запуск сборки production-билда
+$ npm run build
+
+# Разместить production-билд на GitHub Pages
+$ npm run deploy
+```
 ### Посмотреть сайт:
-https://tina-dumilina.github.io/mesto/
+https://tina-dumilina.github.io/project-mesto/

@@ -1,3 +1,13 @@
+import '../pages/index.css';
+
+import {Api} from './Api';
+import {Card} from './Card';
+import {CardList} from './CardList';
+import {FormValidator} from './FormValidator';
+import {PopupForm} from './PopupForm';
+import {PopupImage} from './PopupImage';
+import {UserInfo} from './UserInfo';
+
 //DOM-элементы
 const addPlaceButton = document.querySelector('.user-info__button_add');
 const cardTemplate = document.querySelector('#place-card').content;
@@ -13,12 +23,14 @@ const userAvatarElem = document.querySelector('.user-info__photo');
 const usernameInput = formEditProfile.elements.userName; 
 const userJobInput = formEditProfile.elements.userJob;
 
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
+
 //Функции-хэлперы
 const createCard = (...arg) => new Card(...arg).create();
 
 //Инстансы
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort11',
+  baseUrl: `${serverUrl}/cohort11`,
   headers: {
     authorization: 'e16df6eb-48db-4658-b78e-44a0f91e14de',
     'Content-Type': 'application/json'
