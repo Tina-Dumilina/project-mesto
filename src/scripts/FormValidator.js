@@ -21,7 +21,7 @@ export class FormValidator {
     this.checkSumbitButtonState(inputs);
   }
 
-  checkSumbitButtonState(inputs) { // checkSubmitButtonState
+  checkSumbitButtonState(inputs) { 
     if (inputs.every(this._checkInputValidity)) {
       this._setSubmitButtonState(true);
     } else {

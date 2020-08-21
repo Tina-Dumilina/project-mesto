@@ -23,7 +23,7 @@ const userAvatarElem = document.querySelector('.user-info__photo');
 const usernameInput = formEditProfile.elements.userName; 
 const userJobInput = formEditProfile.elements.userJob;
 
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
+const serverUrl = 'https://nomoreparties.co';
 
 //Функции-хэлперы
 const createCard = (...arg) => new Card(...arg).create();
@@ -125,8 +125,3 @@ userPhotoElement.addEventListener('click', () => changeAvatarPopup.open());
 formAddPlace.addEventListener('input', (e) => addPlaceFormValidator.setEventListeners(e));
 formEditProfile.addEventListener('input', (e) => editProfileFormValidator.setEventListeners(e));
 formChangeAvatar.addEventListener('input', (e) => changeAvatarFormValidator.setEventListeners(e));
-/**
- * Отлично, помимо основных замечаний исправлены дополнительные.
- * Работа принята.
- * Желаю успехов!
- */
